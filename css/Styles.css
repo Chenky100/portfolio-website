@@ -1,0 +1,403 @@
+/*
+Colors used
+
+:root {
+--Text Color (Black): #333333;
+--Primary Color (Off White): #f5f5f5;
+--Secondary Color (Blue): #003366;
+--Button Alt Color: #357b70;
+--Link color(Light Blue) :#4169E1;
+--Visited Link Color (Purple) : #660066;
+--Active Link (Red): #ff4040;
+--Grid Color (Gray): #dddddd;
+*/
+/*Sets the default width of an element to include the padding and the border */
+:root {
+  --primary-color: #f5f5f5;
+  --secondary-color : #003366;
+  --button-color: #e0b354;
+  --button-alt-color: #357b70;
+  --link-color :#4169E1;
+  --visited-link-color : #660066;
+  --active-link : #ff4040;
+  --panel-color : #dddddd;
+  --animation-color1: #ffa500;
+  --animation-color2: #000000;
+  --font-small: 20px;
+  --font-bold: 700;
+}
+
+a {
+  color: var(--primary-color);
+}
+* {
+  box-sizing: border-box ;
+}
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: var(--font-small);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color); /*color is the color for the text and lines of the page*/
+  background-color: var(--primary-color);
+  text-align: center;
+
+}
+
+
+header {
+
+}
+/*-----Styling for Nav Ssction ----*/
+/*Navigation options */
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.page-header__item {
+  width: 13%;
+  height: 13%;
+  max-width: 100%;
+  max-height: 15%;
+}
+
+.nav-logo {
+  max-width: 160px;
+  max-height: 80px;
+}
+.nav{
+  list-style-type: none;
+}
+ /* Had to adjust margin-right to 40px to bring the nav bar back into the screen, need to understand it better. */
+.nav li {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+/*-----Styling for Nav Ssction ----*/
+
+/*centers the footer and flexes it*/
+footer{
+  max-width: 700px;
+  margin: 0 auto;
+  clear: both;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+  /*Draws line under footer text*/
+  .social-media-paragraph{
+  text-decoration: underline;
+  }
+
+
+
+/*-----Main Structure Styling-----*/
+
+/*----General Element Selectors-----*/
+/*Headlines*/
+h1 {
+  font-size: 44px;
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: var(--font-bold);
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: var(--font-bold);
+}
+
+/*Element Selcetors*/
+a {
+  color: var(--secondary-Color);
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  /* visited link */
+  color: var(--visited-link-color);
+}
+
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: var(--active-link );
+}
+/*----General Element Selectors-----*/
+
+
+
+/*----Styling for Buttons----*/
+button, .button {
+/* overwrites browser defaults and resets the border */
+border: none;
+font-family: 'Lato', sans-serif;
+display:inline-block;
+/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+background-color: var(--button-color);
+color: white;
+text-decoration: none;
+/*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
+padding: 10px;
+border:3px solid;
+border-bottom: 2px solid;
+border-radius: 70%;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+
+}
+
+
+button:hover, button:focus, .button:hover, .button:focus  {
+ /* lets the mouse appear as a hand when hovering over the button */
+ cursor:pointer;
+ /* reduces the opacity of the button to 80% */
+ opacity:0.8;
+}
+.nav-list__item--active {
+  text-decoration: none;
+}
+
+.about-me-cv__button, .contact-button__submit{
+  background-color: var(--button-color);
+  color: inherit;
+}
+/*----Styling for Buttons----*/
+
+/*----Styling for home page main content-----*/
+ /*adjust profile picture position*/
+.profile-portrait{
+    float:left;
+    width:30%;
+    margin-right: 2.22%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 50%;
+}
+/*Adjusts the div that contains the profile picture and text together*/
+.profile{
+  max-width: 700px;
+  margin: 0 auto;
+
+}
+
+
+/*----Styling for home page main content-----*/
+
+
+#contact-form{
+  text-align: center;
+}
+
+/*Center table in about page*/
+.about-me-bio2, .table-center{
+  margin-right:auto;
+  margin-left: auto;
+  background-color: var(--panel-color);
+  padding: 1%;
+  text-align: center;
+
+}
+
+
+
+
+/*start grid fallback */
+.project-list__item{
+  display: inline-block;
+  width: 33%;
+}
+/*end grid fallback*/
+
+@supports (display: grid) {
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+}
+/*Grid*/
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+
+}
+/*Grid styling*/
+.project-list__item{
+  background-color: var(--panel-color);
+  width: auto;
+  min-height: auto;
+  margin:0;
+  padding: 20px;
+}
+
+.project-list__item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+/*Responsive web page settings*/
+@media all and (max-width:500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .project-list {
+    grid-template-columns:  1fr 1fr ;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+  .project-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/*ANIMATION*/
+@keyframes color-change {
+  0% {
+    fill: var(--animation-color1);
+  }
+  50% {
+    fill: var(--animation-color2);
+  }
+  100% {
+    fill: var(--active-link);
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+
+}
+
+@Keyframes cloud-move{
+  from {
+    transform: translate(17px, 50px);
+  }
+  to{
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front{
+  animation: 6s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 12s cloud-move-reverse infinite alternate linear;
+}
+
+
+.page-header{
+  background: var(--panel-color);
+}
+
+/* =============================
+Configurring the navbar DIV
+===============================*/
+div.container
+{
+    font-family: Raleway;
+	padding: 0em 0em;
+
+}
+
+div.container a
+{
+    color: var(--text-color);
+    text-decoration: none;
+    font: var(--font-small) Raleway;
+    margin: 0px 10px;
+    padding: 10px 0px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+/*============================
+Navbar DIV Styling
+=============================*/
+div.container a:before, div.container a:after
+{
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--link-color);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
+ }
+
+
+
+div.container  a:after
+{
+  border-width: 2px;
+    transition: all 0.4s;
+}
+
+
+div.container a:hover:before{
+  opacity: 1;
+     transform: translateX(-50%) translateY(-50%) scale(1);
+   }
+
+ div.container a:hover:after
+{
+  opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+
+/*
+.pillarleft
+.pillarright
+.berlin-illustartion
+*/
