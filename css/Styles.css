@@ -92,9 +92,13 @@ footer{
   background-color: var(--panel-color);
 }
 #home-footer{
-position:absolute;
+position: static;
 width:100%;
+padding: 10px;
+margin: 400px auto;
+margin-bottom: 0px ;
 }
+
 
   /*Draws line under footer text*/
   .social-media-paragraph{
@@ -339,7 +343,7 @@ ANIMATION
 
 }
 
-@keyframes cloud-move{
+@Keyframes cloud-move{
   from {
     transform: translate(17px, 50px);
   }
