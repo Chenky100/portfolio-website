@@ -24,7 +24,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
-  color: undefined; /*color is the color for the text and lines of the page*/
+  color: #000000; /*color is the color for the text and lines of the page*/
   background-color: #f5f5f5;
   text-align: center;
 
@@ -99,7 +99,7 @@ footer{
           flex-direction: column;
   background-color: #bccad6;
 }
-.home-footer{
+#home-footer{
 position:absolute;
 width:100%;
 }
@@ -160,6 +160,9 @@ a:hover, a:focus {
 a:active {
   /* selected link */
   color: #ff4040;
+}
+#about-me-cv__button {
+  color: #f5f5f5;
 }
 /*
 ==========================
@@ -506,7 +509,7 @@ div.container
 
 div.container a
 {
-    color: undefined;
+    color: #000000;
     text-decoration: none;
     font: 20px Raleway;
     margin: 0px 10px;
