@@ -5,16 +5,24 @@
 * Browsers: last 4 version
 */
 
+/*
+Colors used
 
 :root {
-  /*
-  ========================
-  Fonts
-  =========================
-  */
+--Text Color (Black): #333333;
+--Primary Color (Off White): #f5f5f5;
+--Secondary Color (Blue): #003366;
+--Button Alt Color: #357b70;
+--Link color(Light Blue) :#4169E1;
+--Visited Link Color (Purple) : #660066;
+--Active Link (Red): #ff4040;
+--Grid Color (Gray): #dddddd;
+*/
+/*Sets the default width of an element to include the padding and the border */
+
+a {
+  color: #f5f5f5;
 }
-
-
 * {
   -webkit-box-sizing: border-box ;
           box-sizing: border-box ;
@@ -29,17 +37,12 @@ body {
   text-align: center;
 
 }
-/*
-==========================
- */
 
 
+header {
 
-/*
-  =========================
-Styling for Nav Ssction 
-  =========================
-*/
+}
+/*-----Styling for Nav Ssction ----*/
 /*Navigation options */
 .page-header{
   display: -webkit-box;
@@ -68,26 +71,19 @@ Styling for Nav Ssction
 .nav{
   list-style-type: none;
 }
+ /* Had to adjust margin-right to 40px to bring the nav bar back into the screen, need to understand it better. */
 .nav li {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
 
 }
-/*
-==========================
- */
+/*-----Styling for Nav Ssction ----*/
 
-
-/*
-  =========================
-  Footer Styling
-  =========================
-*/
+/*centers the footer and flexes it*/
 footer{
-  max-width: 100%;
-  margin-top: 50px;
-  bottom:0;
+  max-width: 700px;
+  margin: 0 auto;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,28 +93,16 @@ footer{
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #bccad6;
-}
-.home-footer{
-position:absolute;
-width:100%;
 }
 
   /*Draws line under footer text*/
   .social-media-paragraph{
   text-decoration: underline;
   }
-/*
-==========================
- */
 
 
 
-/*
- ==========================
-Main Structure Styling
- ==========================
-*/
+/*-----Main Structure Styling-----*/
 
 /*----General Element Selectors-----*/
 /*Headlines*/
@@ -139,16 +123,16 @@ h3 {
 
 /*Element Selcetors*/
 a {
-  color: #667292;
+  color: undefined;
 }
 
 a:link {
-  color: #667292;
+  color: #4169E1;
 }
 
 a:visited {
   /* visited link */
-  color: #3d355f;
+  color: #660066;
 }
 
 
@@ -161,32 +145,27 @@ a:active {
   /* selected link */
   color: #ff4040;
 }
-/*
-==========================
- */
+/*----General Element Selectors-----*/
 
 
 
-
-/*
-==========================
-Styling for Buttons
-==========================
- */
+/*----Styling for Buttons----*/
 button {
 /* overwrites browser defaults and resets the border */
 border: none;
 font-family: 'Lato', sans-serif;
 display:inline-block;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-background-color: #3a57a8;
-color: #f5f5f5;
+background-color: #e0b354;
+color: white;
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
 padding: 10px;
 border:3px solid;
 border-bottom: 2px solid;
 border-radius: 70%;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 -webkit-transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 
@@ -201,14 +180,16 @@ border: none;
 font-family: 'Lato', sans-serif;
 display:inline-block;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-background-color: #3a57a8;
-color: #f5f5f5;
+background-color: #e0b354;
+color: white;
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
 padding: 10px;
 border:3px solid;
 border-bottom: 2px solid;
 border-radius: 70%;
+/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 -webkit-transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 
@@ -228,20 +209,19 @@ button:hover, button:focus, .button:hover, .button:focus  {
 .nav-list__item--active {
   text-decoration: none;
 }
-/*override color rules for anchor tag "button"*/
-#about-me-cv__button{
-  color: #f5f5f5;
+
+.about-me-cv__button{
+  background-color: #e0b354;
+  color: inherit;
 }
-/*
-==========================
- */
 
+.contact-button__submit{
+  background-color: #e0b354;
+  color: inherit;
+}
+/*----Styling for Buttons----*/
 
-/*
-==========================
-Styling for home page main content
-==========================
- */
+/*----Styling for home page main content-----*/
  /*adjust profile picture position*/
 .profile-portrait{
     float:left;
@@ -259,9 +239,7 @@ Styling for home page main content
 }
 
 
-/*
-==========================
- */
+/*----Styling for home page main content-----*/
 
 
 #contact-form{
@@ -272,7 +250,7 @@ Styling for home page main content
 .about-me-bio2{
   margin-right:auto;
   margin-left: auto;
-  background-color: #bccad6;
+  background-color: #dddddd;
   padding: 1%;
   text-align: center;
 
@@ -280,7 +258,7 @@ Styling for home page main content
 .table-center{
   margin-right:auto;
   margin-left: auto;
-  background-color: #bccad6;
+  background-color: #dddddd;
   padding: 1%;
   text-align: center;
 
@@ -364,7 +342,7 @@ Styling for home page main content
 }
 /*Grid styling*/
 .project-list__item{
-  background-color: #bccad6;
+  background-color: #dddddd;
   width: auto;
   min-height: auto;
   margin:0;
@@ -408,15 +386,7 @@ Styling for home page main content
   }
 }
 
-/* 
-==========================
-ANIMATION
-==========================
-*/
-#about-picture{
-  width: 50%;
-  height: 50%;
-}
+/*ANIMATION*/
 @-webkit-keyframes color-change {
   0% {
     fill: #ffa500;
@@ -459,8 +429,8 @@ ANIMATION
 }
 
 .cloud-front{
-  -webkit-animation: 20s cloud-move infinite alternate linear;
-          animation: 20s cloud-move infinite alternate linear;
+  -webkit-animation: 6s cloud-move infinite alternate linear;
+          animation: 6s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
@@ -485,13 +455,13 @@ ANIMATION
   }
 }
 .cloud-back {
-  -webkit-animation: 20s cloud-move-reverse infinite alternate linear;
-          animation: 20s cloud-move-reverse infinite alternate linear;
+  -webkit-animation: 12s cloud-move-reverse infinite alternate linear;
+          animation: 12s cloud-move-reverse infinite alternate linear;
 }
 
 
 .page-header{
-  background: #bccad6;
+  background: #dddddd;
 }
 
 /* =============================
@@ -527,7 +497,7 @@ div.container a:before
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 4px solid #667292;
+  border: 4px solid #4169E1;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
       -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
           transform: translateX(-50%) translateY(-50%) scale(0.8);
@@ -547,7 +517,7 @@ div.container a:after
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 4px solid #667292;
+  border: 4px solid #4169E1;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
       -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
           transform: translateX(-50%) translateY(-50%) scale(0.8);
