@@ -339,7 +339,7 @@ ANIMATION
 
 }
 
-@Keyframes cloud-move{
+@keyframes cloud-move{
   from {
     transform: translate(17px, 50px);
   }
