@@ -1,35 +1,23 @@
-/*
-Colors used
 
 :root {
---Text Color (Black): #333333;
---Primary Color (Off White): #f5f5f5;
---Secondary Color (Blue): #003366;
---Button Alt Color: #357b70;
---Link color(Light Blue) :#4169E1;
---Visited Link Color (Purple) : #660066;
---Active Link (Red): #ff4040;
---Grid Color (Gray): #dddddd;
-*/
-/*Sets the default width of an element to include the padding and the border */
-:root {
   --primary-color: #f5f5f5;
-  --secondary-color : #003366;
-  --button-color: #e0b354;
-  --button-alt-color: #357b70;
-  --link-color :#4169E1;
-  --visited-link-color : #660066;
+  --panel-color: #bccad6;
+  --link-color : #667292;
+  --button-color: #3a57a8  ;
+  --visited-link-color : #3d355f;
   --active-link : #ff4040;
-  --panel-color : #dddddd;
   --animation-color1: #ffa500;
   --animation-color2: #000000;
+  /*
+  ========================
+  Fonts
+  =========================
+  */
   --font-small: 20px;
   --font-bold: 700;
 }
 
-a {
-  color: var(--primary-color);
-}
+
 * {
   box-sizing: border-box ;
 }
@@ -43,12 +31,17 @@ body {
   text-align: center;
 
 }
+/*
+==========================
+ */
 
 
-header {
 
-}
-/*-----Styling for Nav Ssction ----*/
+/*
+  =========================
+Styling for Nav Ssction 
+  =========================
+*/
 /*Navigation options */
 .page-header{
   display: flex;
@@ -71,33 +64,52 @@ header {
 .nav{
   list-style-type: none;
 }
- /* Had to adjust margin-right to 40px to bring the nav bar back into the screen, need to understand it better. */
 .nav li {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
 
 }
-/*-----Styling for Nav Ssction ----*/
+/*
+==========================
+ */
 
-/*centers the footer and flexes it*/
+
+/*
+  =========================
+  Footer Styling
+  =========================
+*/
 footer{
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-top: 50px;
+  bottom:0;
   clear: both;
   display: flex;
   text-align: center;
   flex-direction: column;
+  background-color: var(--panel-color);
+}
+.home-footer{
+position:absolute;
+width:100%;
 }
 
   /*Draws line under footer text*/
   .social-media-paragraph{
   text-decoration: underline;
   }
+/*
+==========================
+ */
 
 
 
-/*-----Main Structure Styling-----*/
+/*
+ ==========================
+Main Structure Styling
+ ==========================
+*/
 
 /*----General Element Selectors-----*/
 /*Headlines*/
@@ -118,7 +130,7 @@ h3 {
 
 /*Element Selcetors*/
 a {
-  color: var(--secondary-Color);
+  color: var(--link-color);
 }
 
 a:link {
@@ -140,11 +152,18 @@ a:active {
   /* selected link */
   color: var(--active-link );
 }
-/*----General Element Selectors-----*/
+/*
+==========================
+ */
 
 
 
-/*----Styling for Buttons----*/
+
+/*
+==========================
+Styling for Buttons
+==========================
+ */
 button, .button {
 /* overwrites browser defaults and resets the border */
 border: none;
@@ -152,15 +171,13 @@ font-family: 'Lato', sans-serif;
 display:inline-block;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
 background-color: var(--button-color);
-color: white;
+color: var(--primary-color);
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
 padding: 10px;
 border:3px solid;
 border-bottom: 2px solid;
 border-radius: 70%;
-/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 
@@ -176,14 +193,20 @@ button:hover, button:focus, .button:hover, .button:focus  {
 .nav-list__item--active {
   text-decoration: none;
 }
-
-.about-me-cv__button, .contact-button__submit{
-  background-color: var(--button-color);
-  color: inherit;
+/*override color rules for anchor tag "button"*/
+#about-me-cv__button{
+  color: var(--primary-color);
 }
-/*----Styling for Buttons----*/
+/*
+==========================
+ */
 
-/*----Styling for home page main content-----*/
+
+/*
+==========================
+Styling for home page main content
+==========================
+ */
  /*adjust profile picture position*/
 .profile-portrait{
     float:left;
@@ -201,7 +224,9 @@ button:hover, button:focus, .button:hover, .button:focus  {
 }
 
 
-/*----Styling for home page main content-----*/
+/*
+==========================
+ */
 
 
 #contact-form{
@@ -285,7 +310,15 @@ button:hover, button:focus, .button:hover, .button:focus  {
   }
 }
 
-/*ANIMATION*/
+/* 
+==========================
+ANIMATION
+==========================
+*/
+#about-picture{
+  width: 50%;
+  height: 50%;
+}
 @keyframes color-change {
   0% {
     fill: var(--animation-color1);
@@ -312,7 +345,7 @@ button:hover, button:focus, .button:hover, .button:focus  {
 }
 
 .cloud-front{
-  animation: 6s cloud-move infinite alternate linear;
+  animation: 20s cloud-move infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
@@ -324,7 +357,7 @@ button:hover, button:focus, .button:hover, .button:focus  {
   }
 }
 .cloud-back {
-  animation: 12s cloud-move-reverse infinite alternate linear;
+  animation: 20s cloud-move-reverse infinite alternate linear;
 }
 
 

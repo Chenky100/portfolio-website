@@ -5,24 +5,16 @@
 * Browsers: last 4 version
 */
 
-/*
-Colors used
 
 :root {
---Text Color (Black): #333333;
---Primary Color (Off White): #f5f5f5;
---Secondary Color (Blue): #003366;
---Button Alt Color: #357b70;
---Link color(Light Blue) :#4169E1;
---Visited Link Color (Purple) : #660066;
---Active Link (Red): #ff4040;
---Grid Color (Gray): #dddddd;
-*/
-/*Sets the default width of an element to include the padding and the border */
-
-a {
-  color: #f5f5f5;
+  /*
+  ========================
+  Fonts
+  =========================
+  */
 }
+
+
 * {
   -webkit-box-sizing: border-box ;
           box-sizing: border-box ;
@@ -37,12 +29,17 @@ body {
   text-align: center;
 
 }
+/*
+==========================
+ */
 
 
-header {
 
-}
-/*-----Styling for Nav Ssction ----*/
+/*
+  =========================
+Styling for Nav Ssction 
+  =========================
+*/
 /*Navigation options */
 .page-header{
   display: -webkit-box;
@@ -71,19 +68,26 @@ header {
 .nav{
   list-style-type: none;
 }
- /* Had to adjust margin-right to 40px to bring the nav bar back into the screen, need to understand it better. */
 .nav li {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
 
 }
-/*-----Styling for Nav Ssction ----*/
+/*
+==========================
+ */
 
-/*centers the footer and flexes it*/
+
+/*
+  =========================
+  Footer Styling
+  =========================
+*/
 footer{
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-top: 50px;
+  bottom:0;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,16 +97,28 @@ footer{
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #bccad6;
+}
+.home-footer{
+position:absolute;
+width:100%;
 }
 
   /*Draws line under footer text*/
   .social-media-paragraph{
   text-decoration: underline;
   }
+/*
+==========================
+ */
 
 
 
-/*-----Main Structure Styling-----*/
+/*
+ ==========================
+Main Structure Styling
+ ==========================
+*/
 
 /*----General Element Selectors-----*/
 /*Headlines*/
@@ -123,16 +139,16 @@ h3 {
 
 /*Element Selcetors*/
 a {
-  color: undefined;
+  color: #667292;
 }
 
 a:link {
-  color: #4169E1;
+  color: #667292;
 }
 
 a:visited {
   /* visited link */
-  color: #660066;
+  color: #3d355f;
 }
 
 
@@ -145,27 +161,32 @@ a:active {
   /* selected link */
   color: #ff4040;
 }
-/*----General Element Selectors-----*/
+/*
+==========================
+ */
 
 
 
-/*----Styling for Buttons----*/
+
+/*
+==========================
+Styling for Buttons
+==========================
+ */
 button {
 /* overwrites browser defaults and resets the border */
 border: none;
 font-family: 'Lato', sans-serif;
 display:inline-block;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-background-color: #e0b354;
-color: white;
+background-color: #3a57a8;
+color: #f5f5f5;
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
 padding: 10px;
 border:3px solid;
 border-bottom: 2px solid;
 border-radius: 70%;
-/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 -webkit-transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 
@@ -180,16 +201,14 @@ border: none;
 font-family: 'Lato', sans-serif;
 display:inline-block;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-background-color: #e0b354;
-color: white;
+background-color: #3a57a8;
+color: #f5f5f5;
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later)My explanation-determines box size */
 padding: 10px;
 border:3px solid;
 border-bottom: 2px solid;
 border-radius: 70%;
-/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 -webkit-transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 
@@ -209,19 +228,20 @@ button:hover, button:focus, .button:hover, .button:focus  {
 .nav-list__item--active {
   text-decoration: none;
 }
-
-.about-me-cv__button{
-  background-color: #e0b354;
-  color: inherit;
+/*override color rules for anchor tag "button"*/
+#about-me-cv__button{
+  color: #f5f5f5;
 }
+/*
+==========================
+ */
 
-.contact-button__submit{
-  background-color: #e0b354;
-  color: inherit;
-}
-/*----Styling for Buttons----*/
 
-/*----Styling for home page main content-----*/
+/*
+==========================
+Styling for home page main content
+==========================
+ */
  /*adjust profile picture position*/
 .profile-portrait{
     float:left;
@@ -239,7 +259,9 @@ button:hover, button:focus, .button:hover, .button:focus  {
 }
 
 
-/*----Styling for home page main content-----*/
+/*
+==========================
+ */
 
 
 #contact-form{
@@ -250,7 +272,7 @@ button:hover, button:focus, .button:hover, .button:focus  {
 .about-me-bio2{
   margin-right:auto;
   margin-left: auto;
-  background-color: #dddddd;
+  background-color: #bccad6;
   padding: 1%;
   text-align: center;
 
@@ -258,7 +280,7 @@ button:hover, button:focus, .button:hover, .button:focus  {
 .table-center{
   margin-right:auto;
   margin-left: auto;
-  background-color: #dddddd;
+  background-color: #bccad6;
   padding: 1%;
   text-align: center;
 
@@ -342,7 +364,7 @@ button:hover, button:focus, .button:hover, .button:focus  {
 }
 /*Grid styling*/
 .project-list__item{
-  background-color: #dddddd;
+  background-color: #bccad6;
   width: auto;
   min-height: auto;
   margin:0;
@@ -386,7 +408,15 @@ button:hover, button:focus, .button:hover, .button:focus  {
   }
 }
 
-/*ANIMATION*/
+/* 
+==========================
+ANIMATION
+==========================
+*/
+#about-picture{
+  width: 50%;
+  height: 50%;
+}
 @-webkit-keyframes color-change {
   0% {
     fill: #ffa500;
@@ -429,8 +459,8 @@ button:hover, button:focus, .button:hover, .button:focus  {
 }
 
 .cloud-front{
-  -webkit-animation: 6s cloud-move infinite alternate linear;
-          animation: 6s cloud-move infinite alternate linear;
+  -webkit-animation: 20s cloud-move infinite alternate linear;
+          animation: 20s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
@@ -455,13 +485,13 @@ button:hover, button:focus, .button:hover, .button:focus  {
   }
 }
 .cloud-back {
-  -webkit-animation: 12s cloud-move-reverse infinite alternate linear;
-          animation: 12s cloud-move-reverse infinite alternate linear;
+  -webkit-animation: 20s cloud-move-reverse infinite alternate linear;
+          animation: 20s cloud-move-reverse infinite alternate linear;
 }
 
 
 .page-header{
-  background: #dddddd;
+  background: #bccad6;
 }
 
 /* =============================
@@ -497,7 +527,7 @@ div.container a:before
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 4px solid #4169E1;
+  border: 4px solid #667292;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
       -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
           transform: translateX(-50%) translateY(-50%) scale(0.8);
@@ -517,7 +547,7 @@ div.container a:after
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 4px solid #4169E1;
+  border: 4px solid #667292;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
       -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
           transform: translateX(-50%) translateY(-50%) scale(0.8);
